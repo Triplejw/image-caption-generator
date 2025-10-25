@@ -6,6 +6,8 @@
 
 A deep learning project that automatically generates natural language descriptions for images using an encoder-decoder architecture with Bahdanau attention mechanism.
 
+![Demo](demo.png)
+
 ## 📋 Table of Contents
 
 - [Features](#features)
