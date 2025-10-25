@@ -66,6 +66,20 @@ A deep learning project that automatically generates natural language descriptio
 - Training Time: ~25 minutes (15 epochs on RTX 3060)
 - GPU Utilization: 80-95%
 
+### Training Performance
+- Training Loss: 2.22 (final)
+- Validation Loss: 3.04 (best)
+- Training Time: ~25 minutes (15 epochs on RTX 3060)
+- GPU Utilization: 80-95%
+
+### Visual Test Evaluation
+
+Below are sample predictions on unseen test images:
+
+![Test Evaluation](demo2.png)
+
+*Interactive HTML report available: Open `test_evaluation_report.html` to explore all test predictions with images.*
+
 ## 🚀 Installation
 
 ### Prerequisites
