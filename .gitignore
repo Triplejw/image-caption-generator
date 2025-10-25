@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyTorch models (too large for GitHub)
+*.pth
+*.pkl
+models/
+models_v2/
+
+# Dataset (too large for GitHub)
+data/Images/
+data/features/
+*.zip
+
+# Keep data structure but ignore images
+!data/.gitkeep
+!data/splits/
+
+# Results
+*.csv
+*.png
+*.jpg
+test_evaluation_report.html
+training_curves.png
+
+# Kaggle
+.kaggle/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
