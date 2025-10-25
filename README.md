@@ -75,18 +75,18 @@ A deep learning project that automatically generates natural language descriptio
 ### Setup Steps
 
 1. Clone the repository
-git clone https://github.com/yourusername/image-caption-generator.git
+git clone https://github.com/Triplejw/image-caption-generator.git
 cd image-caption-generator
 
-2. Create virtual environment
+3. Create virtual environment
 python -m venv venv
 source venv/bin/activate
 
-3. Install dependencies
+4. Install dependencies
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
 
-4. Download Flickr8k dataset
+5. Download Flickr8k dataset
 mkdir -p ~/.kaggle
 chmod 600 ~/.kaggle/kaggle.json
 kaggle datasets download -d adityajn105/flickr8k
