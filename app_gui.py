@@ -166,30 +166,16 @@ def get_model_info():
 # ============ BLEU SCORE DISPLAY ============
 
 def show_metrics():
-    """Display model metrics"""
+    """Explain how to calculate metrics for the currently loaded checkpoint."""
     metrics_text = """
     ### Evaluation Metrics
     
-    **Model Performance:**
-    - Validation Loss: 3.04
-    - Training completed in ~25 minutes
-    
-    **To calculate BLEU scores on test set, run:**
+    The UI does not ship with hard-coded benchmark claims. To calculate BLEU scores for your trained checkpoint on the configured test split, run:
     ```
     python evaluate_model.py
     ```
     
-    **Expected Performance:**
-    - BLEU-1: ~0.55-0.60 (unigram precision)
-    - BLEU-2: ~0.35-0.40 (bigram precision)
-    - BLEU-3: ~0.20-0.25 (trigram precision)
-    - BLEU-4: ~0.10-0.15 (4-gram precision)
-    
-    **Improvements vs Version 1:**
-    ✓ Attention mechanism for spatial understanding
-    ✓ Better color and object recognition
-    ✓ More coherent captions
-    ✓ Train/val split for proper evaluation
+    The script reports BLEU-1/2/3/4. Keep the dataset split, checkpoint, decoding settings, and evaluation code fixed when comparing runs.
     """
     return metrics_text
 

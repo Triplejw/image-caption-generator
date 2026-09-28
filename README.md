@@ -26,7 +26,7 @@ A deep learning project that automatically generates natural language descriptio
 - **Spatial Features**: 7×7 grid (49 regions) for fine-grained attention
 - **Interactive GUI**: Gradio-based web interface for easy caption generation
 - **Comprehensive Evaluation**: BLEU-1/2/3/4 metrics with visual reports
-- **Training Visualization**: Real-time loss curves and performance tracking
+- **Training Visualization**: Post-training loss curves from saved checkpoints
 
 ## 🏗️ Architecture
 
@@ -49,28 +49,7 @@ A deep learning project that automatically generates natural language descriptio
 
 ## 📊 Results
 
-### Performance on Flickr8k Test Set (1,000 unseen images)
-
-| Metric | Score | Industry Baseline |
-|--------|-------|-------------------|
-| BLEU-1 | 0.647 | 0.50-0.60 |
-| BLEU-2 | 0.443 | 0.30-0.40 |
-| BLEU-3 | 0.306 | 0.18-0.25 |
-| BLEU-4 | 0.208 | 0.10-0.15 |
-
-**Our model outperforms typical baselines on all metrics!**
-
-### Training Performance
-- Training Loss: 2.22 (final)
-- Validation Loss: 3.04 (best)
-- Training Time: ~25 minutes (15 epochs on RTX 3060)
-- GPU Utilization: 80-95%
-
-### Training Performance
-- Training Loss: 2.22 (final)
-- Validation Loss: 3.04 (best)
-- Training Time: ~25 minutes (15 epochs on RTX 3060)
-- GPU Utilization: 80-95%
+The repository includes scripts for BLEU-1/2/3/4 evaluation on the Flickr8k test split and for plotting training/validation loss from saved checkpoints. Model checkpoints and generated evaluation artifacts are intentionally not stored in Git, so run the evaluation scripts against your own trained checkpoint before reporting results.
 
 ### Visual Test Evaluation
 
@@ -91,22 +70,30 @@ Below are sample predictions on unseen test images:
 ### Setup Steps
 
 1. Clone the repository
+```bash
 git clone https://github.com/Triplejw/image-caption-generator.git
 cd image-caption-generator
+```
 
-3. Create virtual environment
+2. Create a virtual environment
+```bash
 python -m venv venv
 source venv/bin/activate
+```
 
-4. Install dependencies
+3. Install dependencies
+```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
+```
 
-5. Download Flickr8k dataset
+4. Download Flickr8k
+```bash
 mkdir -p ~/.kaggle
 chmod 600 ~/.kaggle/kaggle.json
 kaggle datasets download -d adityajn105/flickr8k
 unzip flickr8k.zip -d data
+```
 
 ## 🛠️ Technical Stack
 
@@ -135,4 +122,3 @@ MIT License
 ---
 
 Built with ❤️ using PyTorch and Attention
-
